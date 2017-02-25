@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<corenlp.version>3.6.0</corenlp.version>
   </properties>
 
   <dependencies>
@@ -21,18 +22,55 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+   
+   
+  
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>${corenlp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>${corenlp.version}</version>
+			<classifier>models</classifier>
+		</dependency>
+		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>${corenlp.version}</version>
+			<classifier>models-chinese</classifier>
+		</dependency>
+   
+    <!-- 
     <dependency>
 		<groupId>edu.stanford.nlp</groupId>
 		<artifactId>stanford-corenlp</artifactId>
 		<version>3.7.0</version>
 	</dependency>
+	
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+          	<version>3.7.0</version>
+            <classifier>models</classifier>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            	<version>3.7.0</version>
+            <classifier>models-chinese</classifier>
+        </dependency>
+	
+	
 	<dependency>
 		<groupId>edu.stanford.nlp</groupId>
 		<artifactId>stanford-corenlp</artifactId>
 		<version>3.7.0</version>
 		<classifier>models</classifier>
 	</dependency>
-    
+     -->
+     
   </dependencies>
 </project>
