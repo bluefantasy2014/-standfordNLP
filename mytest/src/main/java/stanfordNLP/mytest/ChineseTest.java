@@ -1,6 +1,9 @@
 package stanfordNLP.mytest;
 
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.List;
+import org.apache.log4j.PropertyConfigurator;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
@@ -14,14 +17,23 @@ import edu.stanford.nlp.util.CoreMap;
 public class ChineseTest {
 
     public static void main(String[] args) {
-
+    	PropertyConfigurator.configure("log4j.properties");
         // 载入自定义的Properties文件
+//    	ClassLoader sysClassLoader = ClassLoader.getSystemClassLoader();
+    	
+//        //Get the URLs
+//        URL[] urls = ((URLClassLoader)sysClassLoader).getURLs();
+// 
+//        for(int i=0; i< urls.length; i++)
+//        {
+//            System.out.println(urls[i].getFile());
+//        }     
         
         StanfordCoreNLP pipeline = new StanfordCoreNLP("CoreNLP-chinese.properties");
 
         // 用一些文本来初始化一个注释。文本是构造函数的参数。
         Annotation annotation;
-        annotation = new Annotation("我爱北京天安门，天安门上太阳升。");
+        annotation = new Annotation("我爱北京天安门?");
 
         // 运行所有选定的代码在本文
         pipeline.annotate(annotation);

@@ -15,8 +15,8 @@ public class StanfordCoreNlpExample {
 		Properties props = new Properties();
 		props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-//		Annotation annotation = new Annotation("Fuck the shit!");
-		Annotation annotation = new Annotation("我爱你妈妈");
+		Annotation annotation = new Annotation("Fuck the shit!");
+//		Annotation annotation = new Annotation("我爱你妈妈");
 		pipeline.annotate(annotation);
 		pipeline.xmlPrint(annotation, xmlOut);
 		// An Annotation is a Map and you can get and use the
